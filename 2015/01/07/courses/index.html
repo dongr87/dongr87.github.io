@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Dong</title>
+    <title>courses | Dong</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Dong Wang">
@@ -59,87 +59,70 @@
 
     </header>
     <div id="container">
-      <div id="main">
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2015/01/15/ProjectEuler-problem-1/" title="ProjectEuler problem 1" itemprop="url">
-  
-    <h1 itemprop="name">ProjectEuler problem 1</h1>
+      <div id="main" class="register" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
     
-     
-           <p itemprop="description" >The problem 1 of project euler, settled by python, used to do it in Java several months ago.
-Multiples of 3 and 5:If we list all the natural</p>
-        
+      <a href="/2015/01/07/courses/" title="courses" itemprop="url">courses</a>
+  </h1>
+  <p class="article-author">By
     
-    <time datetime="2015-01-16T04:11:50.000Z" itemprop="datePublished">Jan 15 2015</time>
-  </a>
-</section>
-
-  <section class="register" itemscope itemprop="blogPost">
-  
-    <a href="/2015/01/07/courses/" title="courses" itemprop="url">
-  
-    <h1 itemprop="name">courses</h1>
-    
-     
-           <p itemprop="description" ></p>
-        
-    
+      <a href="http://yoursite.com" title="Dong Wang">Dong Wang</a>
+    </p>
+  <p class="article-time">
     <time datetime="2015-01-07T18:20:41.000Z" itemprop="datePublished">Jan 7 2015</time>
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2015/01/06/goodnight/" title="goodnight" itemprop="url">
-  
-    <h1 itemprop="name">goodnight</h1>
+    Updated:<time datetime="2015-01-07T18:20:41.000Z" itemprop="dateModified">Jan 7 2015</time>
     
-     
-           <p itemprop="description" >just testing if the blog is working locally.
-a really good tutorial for hexo</p>
-        
-    
-    <time datetime="2015-01-06T05:44:19.000Z" itemprop="datePublished">Jan 6 2015</time>
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2015/01/03/software updates/" title="software list of my ubuntu" itemprop="url">
-  
-    <h1 itemprop="name">software list of my ubuntu</h1>
-    
-     
-           <p itemprop="description" >all the things that I installed on this
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+		</div>
+		
+		  
+	</div>
+		<footer class="article-footer clearfix">
 
 
-For Sublime-Text-3:
 
-123sudo add-apt-repository ppa:webupd8team/sublime-text-3sudo apt-get updates</p>
-        
-    
-    <time datetime="2015-01-03T05:44:19.000Z" itemprop="datePublished">Jan 3 2015</time>
-  </a>
-</section>
 
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2014/11/11/hello-world/" title="Hello World" itemprop="url">
-  
-    <h1 itemprop="name">Hello World</h1>
-    
-     
-           <p itemprop="description" >Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the </p>
-        
-    
-    <time datetime="2014-11-11T12:56:29.000Z" itemprop="datePublished">Nov 11 2014</time>
-  </a>
-</section>
+<div class="article-share" id="share">
 
+  <div data-url="http://yoursite.com/2015/01/07/courses/" data-title="courses | Dong" data-tsina="null" class="share clearfix">
+  </div>
 
 </div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/01/15/ProjectEuler-problem-1/" title="ProjectEuler problem 1">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  ProjectEuler problem 1</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/01/06/goodnight/"  title="goodnight">
+ <strong>NEXT:</strong><br/> 
+ <span>goodnight
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
 <div id="asidepart">
@@ -232,6 +215,8 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
@@ -248,6 +233,38 @@ $(document).ready(function(){
   $(window).scroll(function(){
     o.css("top",Math.max(80,260-$(this).scrollTop()));
   });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
 });
 </script>
 
