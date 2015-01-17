@@ -4,10 +4,21 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>courses | Dong</title>
+    <title>python library update | Dong</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Dong Wang">
+    
+    <meta name="description" content="record which python management I have installed
+
+pip install python management 
+
+1sudo apt-get install pip
+
+
+scrapy web spider 
+
+1sudo pip install scr">
     
     
     
@@ -59,20 +70,20 @@
 
     </header>
     <div id="container">
-      <div id="main" class="register" itemscope itemprop="blogPost">
+      <div id="main" class="post" itemscope itemprop="blogPost">
 	<article itemprop="articleBody"> 
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/01/07/courses/" title="courses" itemprop="url">courses</a>
+      <a href="/2015/01/17/update/" title="python library update" itemprop="url">python library update</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="Dong Wang">Dong Wang</a>
     </p>
   <p class="article-time">
-    <time datetime="2015-01-07T18:20:41.000Z" itemprop="datePublished">Jan 7 2015</time>
-    Updated:<time datetime="2015-01-07T18:20:41.000Z" itemprop="dateModified">Jan 7 2015</time>
+    <time datetime="2015-01-17T16:48:07.000Z" itemprop="datePublished">Jan 17 2015</time>
+    Updated:<time datetime="2015-01-17T19:19:31.000Z" itemprop="dateModified">Jan 17 2015</time>
     
   </p>
 </header>
@@ -84,16 +95,37 @@
 		
 		</div>
 		
-		  
+		<p>record which python management I have installed</p>
+<ul>
+<li><strong>pip</strong> install python management </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">sudo</span> apt-get install pip</div></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>scrapy</strong> web spider </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">sudo</span> pip install scrapy</div></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>swampy</strong> green tea tutorial stuff, such as turtle</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">sudo</span> pip install swampy</div></pre></td></tr></table></figure>
+
+  
 	</div>
 		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/python/">python</a>
+  </div>
 
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2015/01/07/courses/" data-title="courses | Dong" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2015/01/17/update/" data-title="python library update | Dong" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -102,19 +134,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/01/15/ProjectEuler-problem-1/" title="ProjectEuler problem 1">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  ProjectEuler problem 1</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/01/06/goodnight/"  title="goodnight">
+<a href="/2015/01/17/ProjectEuler-problem-2/"  title="ProjectEuler problem 2">
  <strong>NEXT:</strong><br/> 
- <span>goodnight
+ <span>ProjectEuler problem 2
 </span>
 </a>
 </div>
@@ -124,6 +148,11 @@
 	
 </div>  
       <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
@@ -269,10 +298,38 @@ $(document).ready(function(){
 </script>
 
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
 
 
 
 
 
   </body>
- </html>
+</html>
