@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>ProjectEuler problem 1 | Dong</title>
+    <title>Vim for memorize | Dong</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Dong Wang">
     
-    <meta name="description" content="The problem 1 of project euler, settled by python, used to do it in Java several months ago.
-Multiples of 3 and 5:If we list all the natural numbers b">
+    <meta name="description" content="Vim Note
+this file is written by vim and to help me remember the basic use of vim.let’s start from the basic.
+i’ll use —&amp;gt; to represent an arrow.[fi">
     
     
     
@@ -67,15 +68,15 @@ Multiples of 3 and 5:If we list all the natural numbers b">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/01/15/ProjectEuler-problem-1/" title="ProjectEuler problem 1" itemprop="url">ProjectEuler problem 1</a>
+      <a href="/2015/04/30/Vim-for-memorization/" title="Vim for memorize" itemprop="url">Vim for memorize</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="Dong Wang">Dong Wang</a>
     </p>
   <p class="article-time">
-    <time datetime="2015-01-16T04:11:50.000Z" itemprop="datePublished">Jan 15 2015</time>
-    Updated:<time datetime="2015-01-16T04:24:07.000Z" itemprop="dateModified">Jan 15 2015</time>
+    <time datetime="2015-05-01T03:56:55.000Z" itemprop="datePublished">Apr 30 2015</time>
+    Updated:<time datetime="2015-05-01T03:59:32.000Z" itemprop="dateModified">Apr 30 2015</time>
     
   </p>
 </header>
@@ -84,21 +85,79 @@ Multiples of 3 and 5:If we list all the natural numbers b">
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vim_Note"><span class="toc-number">1.</span> <span class="toc-text">Vim Note</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#about_files_(open,_save,_running_on_the_background)"><span class="toc-number">1.1.</span> <span class="toc-text">about files (open, save, running on the background)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#motion"><span class="toc-number">1.2.</span> <span class="toc-text">motion</span></a></li></ol></li></ol>
 		</div>
 		
-		<p>The problem 1 of <a href="https://projecteuler.net" target="_blank" rel="external">project euler</a>, settled by python, used to do it in Java several months ago.</p>
-<p>Multiples of 3 and 5:<br>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6, 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># ProjectEuler problem 1: multiples of 3 and 5</span></div><div class="line">__author__ = '<span class="type">Dong</span> <span class="type">Wang</span>'</div><div class="line"></div><div class="line">def main1():</div><div class="line">    numList = []</div><div class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> <span class="type">range</span>(<span class="number">1000</span>):</div><div class="line">        <span class="keyword">if</span> num%<span class="number">3</span> == <span class="number">0</span> <span class="keyword">or</span> num%<span class="number">5</span> == <span class="number">0</span>:</div><div class="line">            numList.append(num)</div><div class="line">    print (sum(numList))</div><div class="line"></div><div class="line"></div><div class="line">main1()</div><div class="line"></div><div class="line">def main2():</div><div class="line">    <span class="literal">result</span> = <span class="number">0</span></div><div class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> <span class="type">range</span>(<span class="number">1000</span>):</div><div class="line">        <span class="keyword">if</span> num%<span class="number">3</span> == <span class="number">0</span> <span class="keyword">or</span> num%<span class="number">5</span> == <span class="number">0</span>:</div><div class="line">            <span class="literal">result</span> += num</div><div class="line">    print (<span class="literal">result</span>)</div><div class="line"></div><div class="line"></div><div class="line">main2()</div></pre></td></tr></table></figure>
-
-<p>will solve more problems and update solution on this blog.</p>
+		<h2 id="Vim_Note">Vim Note</h2>
+<p>this file is written by vim and to help me remember the basic use of vim.<br>let’s start from the basic.</p>
+<p>i’ll use —&gt; to represent an arrow.<br>[filename] to represent the filename without ‘[]’.</p>
+<h3 id="about_files_(open,_save,_running_on_the_background)">about files (open, save, running on the background)</h3>
+<ul>
+<li>vim —&gt; open vim in the terminal.</li>
+<li>vim filename —&gt; open file with selected filename</li>
+<li>vim + n filename —&gt; open the [n]th line of file with filename and</li>
+<li>vim -R filename —&gt; open file in READ-ONLY mode</li>
+<li>vimdiff fileA fileB —&gt; find the difference of A and B</li>
+<li>:wq / :x —&gt; write and quit</li>
+<li>ZZ —&gt; save and quit</li>
+<li>:w filename —&gt; save as</li>
+<li>:w /tmp/1 —&gt; save to the temp file</li>
+<li>:saveas <path to="" file=""> —&gt; save to the path</li>
+<li>:q! —&gt; force quit</li>
+<li>ZQ —&gt; force quit</li>
+<li>:e filename —&gt; open filename, quit the current and jump in the filename</li>
+<li>:e! —&gt; give up the modifies, reopen the current file</li>
+<li>:e —&gt; reload the file</li>
+<li>ctrl-z / fg —&gt; switch back to terminal</li>
+<li>:f / ctrl-g —&gt; show file name, line number and current percentage.</li>
+<li>:!command —&gt; quit vi and implement command, and switch back to vim</li>
+<li>:r!command —&gt; put the output of the command line to current line</li>
+<li>:sh —&gt; go back to terminal, <em>ctrl-d</em> to come back</li>
+<li>:X —&gt; encrypt the file</li>
+<li>:version —&gt; show vim version</li>
+<li>:f filename —&gt; change the file name, create a duplicate file</li>
+</ul>
+<h3 id="motion">motion</h3>
+<ul>
+<li>w —&gt; next word</li>
+<li>W —&gt; next word, without punctuation</li>
+<li>b —&gt; previous word</li>
+<li>B —&gt; previous word, without punctuation</li>
+<li>e —&gt; end of word</li>
+<li>E —&gt; end of word, without punctuation</li>
+<li>0 —&gt; begging of current line</li>
+<li>$ —&gt; end of current line</li>
+<li>^ —&gt; move to the beginning of current line (unblank)</li>
+<li>g_ —&gt; move to the end of current line (unblank)</li>
+<li>n+ —&gt; move down [n]th line</li>
+<li>n- —&gt; move up [n]th line</li>
+<li>G —&gt; move to last line</li>
+<li>gg —&gt; move to the first line</li>
+<li>nG / :n —&gt; move to the [n]th line</li>
+<li>[[ —&gt; beginning line</li>
+<li>]] —&gt; ending line</li>
+<li>H —&gt; move cursor to the top line of screen</li>
+<li>M —&gt; move cursor to the middle line of screen</li>
+<li>L —&gt; move cursor to the last line of screen</li>
+<li>( —&gt; move to beginning of the sentence</li>
+<li>) —&gt; move to end of the sentence</li>
+<li>{ —&gt; move to beginning of the paragraph</li>
+<li>} —&gt; move to end of the paragraph</li>
+<li>% —&gt; move to the paired parenthesis</li>
+<li><ul>
+<li>/ # —&gt; pair words, * for next and # for previous</li>
+</ul>
+</li>
+<li>zf —&gt; fold(with direction keys)</li>
+<li>zo —&gt; unfold</li>
+</ul>
   
 	</div>
 		<footer class="article-footer clearfix">
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/python/">python</a><a href="/tags/euler/">euler</a>
+  <span></span> <a href="/tags/vim/">vim</a><a href="/tags/tools/">tools</a>
   </div>
 
 
@@ -111,7 +170,7 @@ Multiples of 3 and 5:If we list all the natural numbers b">
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2015/01/15/ProjectEuler-problem-1/" data-title="ProjectEuler problem 1 | Dong" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2015/04/30/Vim-for-memorization/" data-title="Vim for memorize | Dong" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -120,19 +179,11 @@ Multiples of 3 and 5:If we list all the natural numbers b">
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/01/17/ProjectEuler-problem-2/" title="ProjectEuler problem 2">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  ProjectEuler problem 2</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/01/07/courses/"  title="courses">
+<a href="/2015/04/27/Show-Me-The-Code-0000/"  title="">
  <strong>NEXT:</strong><br/> 
- <span>courses
+ <span>(no title)
 </span>
 </a>
 </div>
@@ -145,7 +196,7 @@ Multiples of 3 and 5:If we list all the natural numbers b">
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vim_Note"><span class="toc-number">1.</span> <span class="toc-text">Vim Note</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#about_files_(open,_save,_running_on_the_background)"><span class="toc-number">1.1.</span> <span class="toc-text">about files (open, save, running on the background)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#motion"><span class="toc-number">1.2.</span> <span class="toc-text">motion</span></a></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
